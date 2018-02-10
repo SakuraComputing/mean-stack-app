@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var ctrlHotels = require('../controllers/hotels.controllers');
+const express = require('express');
+const router = express.Router();
+const ctrlHotels = require('../controllers/hotels.controllers');
+const ctrlReviews = require('../controllers/reviews.controllers');
 
 router
     .route("/hotels")
@@ -13,5 +14,15 @@ router
 router
     .route('/hotels/new')
     .post(ctrlHotels.hotelsAddOne);
+
+//Reviews
+
+router
+    .route("/hotels/:hotelId/reviews")
+    .get(ctrlReviews.reviewsGetAll);
+
+router
+    .route("/hotels/:hotelId/reviews/:reviewId")
+    .get(ctrlReviews.reviewsGetOne);
 
 module.exports = router;
