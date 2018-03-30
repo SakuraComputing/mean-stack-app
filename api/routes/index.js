@@ -6,7 +6,7 @@ const ctrlUsers = require('../controllers/users.controllers');
 
 router
     .route("/hotels")
-    .get(ctrlHotels.hotelsGetAll)
+    .get(ctrlUsers.authenticate, ctrlHotels.hotelsGetAll)
     .post(ctrlHotels.hotelsAddOne);
 
 router
