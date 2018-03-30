@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
-const ctrlHotels = require('../controllers/hotels.controllers');
-const ctrlReviews = require('../controllers/reviews.controllers');
-const ctrlUsers = require('../controllers/users.controllers');
+var express = require('express');
+var router = express.Router();
+var ctrlHotels = require('../controllers/hotels.controllers');
+var ctrlReviews = require('../controllers/reviews.controllers');
+var ctrlUsers = require('../controllers/users.controllers');
 
 router
     .route("/hotels")
