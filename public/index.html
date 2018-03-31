@@ -2,13 +2,18 @@
 <html ng-app="meanhotel" lang="en">
 <head>
     <meta charset="UTF-8">
+    <p></p>
+    <div></div>
     <title>MEAN Hotel</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 
-    <div ng-view></div>
+    <mh-navigation></mh-navigation>
+    <div class="container">
+        <div ng-view></div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -33,5 +38,7 @@
     <script src="angular-app/hotel-data-factory/hotel-data-factory.js"></script>
     <script src="angular-app/hotel-rating/hotel-rating-directive.js"></script>
     <script src="angular-app/register/register-controller.js"></script>
+    <script src="angular-app/navigation-directive/navigation-directive.js"></script>
+    <script src="angular-app/login/login-controller.js"></script>
 </body>
 </html>
