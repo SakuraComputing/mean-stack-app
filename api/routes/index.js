@@ -9,8 +9,6 @@ router
     .get(ctrlUsers.authenticate, ctrlHotels.hotelsGetAll)
     .post(ctrlHotels.hotelsAddOne);
 
-    console.log("Is it getting here?");
-
 router
     .route("/hotels/:hotelId")
     .get(ctrlHotels.hotelsGetOne)
@@ -22,7 +20,7 @@ router
 router
     .route("/hotels/:hotelId/reviews")
     .get(ctrlReviews.reviewsGetAll)
-    .post(ctrlReviews.reviewsAddOne);
+    .post(ctrlUsers.authenticate, ctrlReviews.reviewsAddOne);
 
 router
     .route("/hotels/:hotelId/reviews/:reviewId")
