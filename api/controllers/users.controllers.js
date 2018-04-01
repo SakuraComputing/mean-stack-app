@@ -52,6 +52,7 @@ module.exports.login = function(req, res) {
 };
 
 module.exports.authenticate = function (req, res, next) {
+    console.log("Is it here???????", req);
     var headerExists = req.headers.authorization;
     if(headerExists) {
         var token = req.headers.authorization.split(' ')[1];
@@ -60,6 +61,7 @@ module.exports.authenticate = function (req, res, next) {
                 console.log(error);
                 res.status(401).json('Unauthorised');
             } else {
+                console.log("Authenticated");
                 req.user = decoded.username;
                 next();
             }

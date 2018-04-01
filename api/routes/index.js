@@ -9,6 +9,8 @@ router
     .get(ctrlUsers.authenticate, ctrlHotels.hotelsGetAll)
     .post(ctrlHotels.hotelsAddOne);
 
+    console.log("Is it getting here?");
+
 router
     .route("/hotels/:hotelId")
     .get(ctrlHotels.hotelsGetOne)
