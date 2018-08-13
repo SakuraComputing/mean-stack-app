@@ -23,13 +23,13 @@ Served by Nodemon
 Pull down the code
 Run npm install
 
-Start Mongod
+Create the meanhotel database in something like mLab and point the application at it
 
 install nodemon 1.14.12
 
 start nodemon
 
-Apllication runs on port 3000. 
+Application runs on port 3000. 
 
 
 

@@ -33,8 +33,9 @@ function HotelController($route, $window, hotelDataFactory, $routeParams, AuthFa
             review: vm.review
         };
         if(vm.reviewForm.$valid) {
-            hotelDataFactory.postReview(id, postData).then(function (response) {
-                if (response.status === 200) {
+            hotelDataFactory.postReview(id, postData).then(function(response) {
+                console.log(response.status);
+                if (response.status === 201) {
                     $route.reload();
                 }
             }).catch(function (error) {

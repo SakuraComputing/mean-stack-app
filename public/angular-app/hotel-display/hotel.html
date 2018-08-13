@@ -22,12 +22,15 @@
         Your rating: <input type="number" name="rating" required ng-pattern="/^[1-5]$/" ng-model="vm.rating">
         <div ng-show="vm.reviewForm.rating.$dirty && vm.reviewForm.rating.$invalid && vm.isSubmitted">
             <p>Rating must be between 1-5</p>
+
+
         </div>
 
         Your review: <textarea name="review" required ng-model="vm.review"></textarea>
         <div ng-show="vm.reviewForm.review.$dirty && vm.isSubmitted">
             <p>Please add a review</p>
         </div>
+
         <button type="submit" class="btn">Add Review</button>
     </form>
 </div>
